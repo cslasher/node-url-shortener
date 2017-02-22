@@ -1,0 +1,23 @@
+{
+  "name": "node-url-shortener",
+  "version": "1.0.0",
+  "description": "A small url shortener with Node.js and Mongo DB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cslasher/node-url-shortener.git"
+  },
+  "author": "Edwin L",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cslasher/node-url-shortener/issues"
+  },
+  "homepage": "https://github.com/cslasher/node-url-shortener#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "mongodb": "^2.2.24"
+  }
+}

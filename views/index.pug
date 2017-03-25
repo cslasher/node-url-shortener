@@ -1,0 +1,15 @@
+html
+  head
+    title URL Shortener
+  body
+    h2 URL Shortener Microservice:
+    p User stories: 
+      UL 
+        LI I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+        LI If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
+        LI When I visit that shortened URL, it will redirect me to my original link.
+    h2 Examples:
+    h3 Creation:
+    p /new/https://www.google.com
+    h3 Redirect:
+    p /12345

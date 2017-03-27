@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+var validator = require('validator')
 var port = process.env.PORT||3000
 
 app.set('views', './views')
@@ -11,7 +12,11 @@ app.get('/', function (req, res) {
 
 app.get('/new/:item*', function (req, res) {
   var url = req.params.item + req.params[0]
-  res.send(url)
+  if (validator.isURL(url)) {
+  	res.send(url)
+  } else {
+  	res.send(`This is not a valid URL: ${url}`)
+  }
 })
 
 app.listen(port, function () {

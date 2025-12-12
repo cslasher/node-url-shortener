@@ -1,9 +1,15 @@
-var mongoose = require("mongoose")
+var mongoose = require('mongoose');
 
-var ip = process.env.IP||'127.0.0.1'
-var mongoURL = `mongodb://${ip}:27017/urlshortener`
+var ip = process.env.IP || '127.0.0.1';
+var mongoURL = `mongodb://${ip}:27017/urlshortener`;
 
-mongoose.Promise = global.Promise
-mongoose.connect(mongoURL)
+mongoose
+  .connect(mongoURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .catch((err) => {
+    console.error('MongoDB connection error:', err);
+  });
 
-module.exports = {mongoose}
+module.exports = { mongoose };

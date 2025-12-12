@@ -1,17 +1,18 @@
+var mongoose = require('mongoose');
 
-var mongoose = require("mongoose")
+var urlSchema = new mongoose.Schema({
+  address: {
+    type: String,
+    required: true,
+    minlength: 1,
+    trim: true,
+  },
+  shortAddress: {
+    type: String,
+    required: true,
+  },
+});
 
-var URL = mongoose.model('URL', {
-    address: {
-        type: String,
-        required: true,
-        minlength: 1,
-        trim: true
-    },
-    shortAddress: {
-        type: String,
-        required: true
-    }
-})
+var URL = mongoose.model('URL', urlSchema);
 
-module.exports = {URL}
+module.exports = { URL };

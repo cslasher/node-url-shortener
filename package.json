@@ -21,7 +21,7 @@
   "dependencies": {
     "express": "^4.19.2",
     "mongodb": "^4.17.2",
-    "mongoose": "^6.12.3",
+    "mongoose": "^6.13.9",
     "pug": "^3.0.2",
     "shorthash": "^0.0.2",
     "validator": "^13.11.0"

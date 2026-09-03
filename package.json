@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/cslasher/node-url-shortener#readme",
   "dependencies": {
-    "express": "^4.22.2",
+    "express": "^5.2.1",
     "mongodb": "^4.17.2",
     "mongoose": "^6.13.10",
     "pug": "^3.0.2",
